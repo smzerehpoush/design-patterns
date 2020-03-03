@@ -12,4 +12,4 @@ and should be avoided if reuse and changeability are desired. In such
 scenarios, we can make use of patterns to give this a more general and
 flexible approach.
 
-- [Factory Pattern](factory/README.md)
+- [Factory Pattern](factory)
