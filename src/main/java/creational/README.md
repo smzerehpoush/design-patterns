@@ -13,3 +13,4 @@ scenarios, we can make use of patterns to give this a more general and
 flexible approach.
 
 - [Factory Pattern](factory)
+- [Abstract Factory Pattern](abstract_factory)
