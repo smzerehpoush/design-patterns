@@ -14,4 +14,5 @@ flexible approach.
 
 - [Factory Pattern](factory)
 - [Abstract Factory Pattern](abstract_factory)
-- [Builder Factory Pattern](builder)
+- [Builder Pattern](builder)
+- [Singleton Pattern](builder)
