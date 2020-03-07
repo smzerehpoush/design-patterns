@@ -1,3 +1,13 @@
 # Behavioral Design Patterns
 
-- [Observer Pattern](observer)
+Behavioral design patterns are concerned with algorithms and the assignment of responsibilities between objects.
+- [x] [Observer Pattern](observer)
+- [ ] [Command Pattern](command)
+- [ ] [Iterator Pattern](iterator)
+- [ ] [Mediator Pattern](mediator)
+- [ ] [Memento Pattern](memento)
+- [ ] [State Pattern](state)
+- [ ] [Strategy Pattern](strategy)
+- [ ] [Template Method Pattern](template_method)
+- [ ] [Visitor Pattern](visitor)
+- [ ] [Chain Of Responsibilities Pattern](chain_of_responsibilites)
