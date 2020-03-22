@@ -2,7 +2,7 @@
 
 Behavioral design patterns are concerned with algorithms and the assignment of responsibilities between objects.
 - [x] [Observer Pattern](observer)
-- [ ] [Command Pattern](command)
+- [x] [Command Pattern](command)
 - [ ] [Iterator Pattern](iterator)
 - [ ] [Mediator Pattern](mediator)
 - [ ] [Memento Pattern](memento)
