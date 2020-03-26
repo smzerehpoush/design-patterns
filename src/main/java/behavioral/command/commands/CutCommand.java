@@ -1,4 +1,7 @@
-package behavioral.command;
+package behavioral.command.commands;
+
+import behavioral.command.Command;
+import behavioral.command.Editor;
 
 /**
  * @author Seyyed Mahdiyar Zerehpoush
@@ -15,10 +18,11 @@ public class CutCommand extends Command {
             return false;
         backUp();
         this.editor.setClipboard(this.editor.getTextField().getSelectedText());
-        this.editor.getTextField().setText(
+        String editedText =
                 this.editor.getTextField().getText().substring(0, this.editor.getTextField().getSelectionStart()) +
-                        this.editor.getTextField().getText().substring(this.editor.getTextField().getSelectionEnd())
-        );
+                        this.editor.getTextField().getText().substring(this.editor.getTextField().getSelectionEnd());
+        this.editor.getTextField().setText(editedText);
+        this.after = editor.getTextField().getText();
         return true;
     }
 }

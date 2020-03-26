@@ -1,5 +1,9 @@
 package behavioral.command;
 
+import behavioral.command.commands.CopyCommand;
+import behavioral.command.commands.CutCommand;
+import behavioral.command.commands.PasteCommand;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -10,6 +14,7 @@ public class Editor {
     private JTextArea textField;
     private String clipboard;
     private CommandHistory commandHistory = new CommandHistory();
+    private Command lastExecutedCommand;
 
     public void init() {
         JFrame frame = new JFrame("Simple Text Editor");
@@ -28,17 +33,20 @@ public class Editor {
         JButton pasteButton = new JButton("Paste");
         JButton cutButton = new JButton("Cut");
         JButton undoButton = new JButton("Undo");
+        JButton redoButton = new JButton("Redo");
 
         Editor editor = this;
         copyButton.addActionListener(e -> executeCommand(new CopyCommand(editor)));
         pasteButton.addActionListener(e -> executeCommand(new PasteCommand(editor)));
         cutButton.addActionListener(e -> executeCommand(new CutCommand(editor)));
         undoButton.addActionListener(e -> undo());
+        redoButton.addActionListener(e -> redo());
 
         buttons.add(copyButton);
         buttons.add(pasteButton);
         buttons.add(cutButton);
         buttons.add(undoButton);
+        buttons.add(redoButton);
         panel.add(buttons);
 
         frame.setSize(500, 200);
@@ -47,8 +55,10 @@ public class Editor {
     }
 
     private void executeCommand(Command command) {
-        if (command.execute())
+        if (command.execute()) {
             commandHistory.push(command);
+            lastExecutedCommand = command;
+        }
     }
 
     private void undo() {
@@ -56,17 +66,26 @@ public class Editor {
             this.textField.setText(null);
             return;
         }
-        Command command = commandHistory.pop();
-        if (command != null)
+        Command command = commandHistory.undo();
+        if (command != null) {
             command.undo();
+        }
+    }
+
+    private void redo() {
+        if (commandHistory.isEmpty()) {
+            this.textField.setText(null);
+            return;
+        }
+        Command command = commandHistory.redo();
+        if (command != null && command != lastExecutedCommand) {
+            command.redo();
+            lastExecutedCommand = command;
+        }
     }
 
     public JTextArea getTextField() {
         return textField;
-    }
-
-    public void setTextField(JTextArea textField) {
-        this.textField = textField;
     }
 
     public String getClipboard() {

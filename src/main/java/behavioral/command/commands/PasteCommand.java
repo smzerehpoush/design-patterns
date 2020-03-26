@@ -1,4 +1,7 @@
-package behavioral.command;
+package behavioral.command.commands;
+
+import behavioral.command.Command;
+import behavioral.command.Editor;
 
 /**
  * @author Seyyed Mahdiyar Zerehpoush
@@ -14,6 +17,7 @@ public class PasteCommand extends Command {
             return false;
         backUp();
         this.editor.getTextField().insert(this.editor.getClipboard(), this.editor.getTextField().getCaretPosition());
+        this.after = editor.getTextField().getText();
         return true;
     }
 }

@@ -5,18 +5,23 @@ package behavioral.command;
  */
 public abstract class Command {
     protected Editor editor;
-    private String backup;
+    protected String after;
+    private String before;
 
     public Command(Editor editor) {
         this.editor = editor;
     }
 
     protected void backUp() {
-        this.backup = editor.getTextField().getText();
+        this.before = editor.getTextField().getText();
     }
 
     protected void undo() {
-        editor.getTextField().setText(this.backup);
+        editor.getTextField().setText(this.before);
+    }
+
+    protected void redo() {
+        editor.getTextField().setText(this.after);
     }
 
     protected abstract boolean execute();
