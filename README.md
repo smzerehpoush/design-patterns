@@ -15,7 +15,7 @@
     - [x] [Proxy Pattern](src/main/java/structural/proxy)
 - [Behavioral Design Patterns](src/main/java/behavioral)
     - [x] [Observer Pattern](src/main/java/behavioral/observer)
-    - [ ] [Command Pattern](src/main/java/behavioral/command)
+    - [x] [Command Pattern](src/main/java/behavioral/command)
     - [ ] [Iterator Pattern](src/main/java/behavioral/iterator)
     - [ ] [Mediator Pattern](src/main/java/behavioral/mediator)
     - [ ] [Memento Pattern](src/main/java/behavioral/memento)
