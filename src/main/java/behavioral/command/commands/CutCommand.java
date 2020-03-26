@@ -22,7 +22,7 @@ public class CutCommand extends Command {
                 this.editor.getTextField().getText().substring(0, this.editor.getTextField().getSelectionStart()) +
                         this.editor.getTextField().getText().substring(this.editor.getTextField().getSelectionEnd());
         this.editor.getTextField().setText(editedText);
-        this.after = editor.getTextField().getText();
+        backUpAfter();
         return true;
     }
 }

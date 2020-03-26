@@ -16,7 +16,6 @@ public class CopyCommand extends Command {
         if (this.editor.getTextField().getSelectedText() != null &&
                 !this.editor.getTextField().getSelectedText().isEmpty())
             this.editor.setClipboard(this.editor.getTextField().getSelectedText());
-        this.after = editor.getTextField().getText();
         return false;
     }
 }

@@ -5,8 +5,8 @@ package behavioral.command;
  */
 public abstract class Command {
     protected Editor editor;
-    protected String after;
     private String before;
+    private String after;
 
     public Command(Editor editor) {
         this.editor = editor;
@@ -14,6 +14,10 @@ public abstract class Command {
 
     protected void backUp() {
         this.before = editor.getTextField().getText();
+    }
+
+    protected void backUpAfter() {
+        this.after = editor.getTextField().getText();
     }
 
     protected void undo() {
