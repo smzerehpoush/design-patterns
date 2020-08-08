@@ -1,16 +1,17 @@
 package creational.prototype;
 
+import java.util.logging.Logger;
+
 /**
  * @author Seyyed Mahdiyar Zerehpoush
  */
 public class Main {
-    public static void main(String[] args) {
-        Square square = new Square("1");
-        ShapeCache.addToCache(square);
-        Rectangle rectangle = new Rectangle("2");
-        ShapeCache.addToCache(rectangle);
+    private static final Logger logger = Logger.getLogger(Main.class.getName());
 
-        ShapeCache.getShape("1").draw();
-        ShapeCache.getShape("2").draw();
+    public static void main(String[] args) {
+        Shape shape = new Shape("1", 1, 2);
+        Shape copy = new Shape(shape);
+        logger.info("shape : " + shape);
+        logger.info("copy : " + copy);
     }
 }

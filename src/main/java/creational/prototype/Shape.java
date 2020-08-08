@@ -3,39 +3,40 @@ package creational.prototype;
 /**
  * @author Seyyed Mahdiyar Zerehpoush
  */
-public abstract class Shape implements Cloneable {
+public class Shape {
     private String id;
-    private ShapeType type;
+    private int width;
+    private int height;
 
-    public Shape(ShapeType type, String id) {
-        this.type = type;
+    public Shape(String id, int width, int height) {
         this.id = id;
+        this.width = width;
+        this.height = height;
     }
 
-    abstract void draw();
+    public Shape(Shape shape) {
+        this(shape.getId(), shape.getWidth(), shape.getHeight());
+    }
 
     public String getId() {
         return id;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public int getWidth() {
+        return width;
     }
 
-    public ShapeType getType() {
-        return type;
-    }
-
-    public void setType(ShapeType type) {
-        this.type = type;
+    public int getHeight() {
+        return height;
     }
 
     @Override
-    protected Object clone() {
-        try {
-            return super.clone();
-        } catch (CloneNotSupportedException e) {
-            return null;
-        }
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Shape{");
+        sb.append("id='").append(id).append('\'');
+        sb.append(", width=").append(width);
+        sb.append(", height=").append(height);
+        sb.append('}');
+        return sb.toString();
     }
 }
