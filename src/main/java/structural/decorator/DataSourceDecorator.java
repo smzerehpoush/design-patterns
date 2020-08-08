@@ -4,7 +4,7 @@ package structural.decorator;
  * @author Seyyed Mahdiyar Zerehpoush
  */
 public class DataSourceDecorator implements DataSource {
-    private DataSource dataSource;
+    private final DataSource dataSource;
 
     public DataSourceDecorator(DataSource dataSource) {
         this.dataSource = dataSource;

@@ -7,7 +7,7 @@ import java.util.List;
  * @author Seyyed Mahdiyar Zerehpoush
  */
 public class CommandHistory {
-    private List<Command> commands = new ArrayList<>();
+    private final List<Command> commands = new ArrayList<>();
     private int index = -1;
 
     public void push(Command command) {
@@ -25,12 +25,13 @@ public class CommandHistory {
     }
 
     public Command redo() {
-        if (index >= commands.size() - 1)
+        if (index >= commands.size() - 1) {
             if (commands.isEmpty())
                 return null;
-            else
+            else {
                 return commands.get(commands.size() - 1);
-
+            }
+        }
         return this.commands.get(index++);
     }
 
