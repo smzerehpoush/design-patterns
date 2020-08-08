@@ -1,4 +1,6 @@
 # Design-Patterns implemented in Java
+
+![build](https://github.com/smzerehpoush/design-patterns/workflows/Java%20CI%20with%20Maven/badge.svg)
 - [Creational Design Patterns](src/main/java/creational)
     - [X] [Factory Pattern](src/main/java/creational/factory)
     - [X] [Abstract Factory Pattern](src/main/java/creational/abstract_factory)
