@@ -10,8 +10,14 @@ public class Node<T> {
 
     public Node(T data) {
         this.data = data;
-        rightChild = null;
-        leftChild = null;
+        this.rightChild = null;
+        this.leftChild = null;
+    }
+
+    public Node(T data, Node<T> leftChild, Node<T> rightChild) {
+        this.data = data;
+        this.leftChild = leftChild;
+        this.rightChild = rightChild;
     }
 
     public Node<T> getRightChild() {
