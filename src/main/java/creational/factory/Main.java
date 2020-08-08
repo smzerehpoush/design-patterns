@@ -6,7 +6,7 @@ import java.util.logging.Logger;
  * @author Seyyed Mahdiyar Zerehpoush
  */
 public class Main {
-    private static Logger logger = Logger.getGlobal();
+    private final static Logger logger = Logger.getLogger(Main.class.getName());
 
     public static void main(String[] args) {
         Product product = ProductFactory.getProduct("My");

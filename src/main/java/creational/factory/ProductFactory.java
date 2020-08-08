@@ -4,6 +4,9 @@ package creational.factory;
  * @author Seyyed Mahdiyar Zerehpoush
  */
 public class ProductFactory {
+    private ProductFactory() {
+    }
+
     public static Product getProduct(String productType) {
         switch (productType) {
             case "My":
