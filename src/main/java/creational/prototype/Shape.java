@@ -32,7 +32,7 @@ public class Shape {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("Shape{");
+        final StringBuilder sb = new StringBuilder("Request{");
         sb.append("id='").append(id).append('\'');
         sb.append(", width=").append(width);
         sb.append(", height=").append(height);
