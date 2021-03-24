@@ -1,7 +1,8 @@
 package structural.flyweight.client;
 
-import flyweight.Circle;
-import flyweight.ShapeFactory;
+
+import structural.flyweight.Circle;
+import structural.flyweight.ShapeFactory;
 
 public class Main {
     private static final String[] colors = {"Red", "Green", "Blue", "White", "Black"};

@@ -1,7 +1,7 @@
 package behavioral.state.client;
 
-import state.state.A;
-import state.statemachine.StateMachine;
+import behavioral.state.state.A;
+import behavioral.state.statemachine.StateMachine;
 
 public class Client {
     public static void main(String[] args) {
