@@ -5,8 +5,8 @@ flexible and efficient.
 
 - [x] [Adapter Pattern](adapter)
 - [x] [Bridge Pattern](bridge)
-- [ ] [Composite Pattern](composite)
+- [x] [Composite Pattern](composite)
 - [x] [Decorator Pattern](decorator)
 - [x] [Facade Pattern](facade)
-- [ ] [Flyweight Pattern](flyweight)
+- [x] [Flyweight Pattern](flyweight)
 - [x] [Proxy Pattern](proxy)
